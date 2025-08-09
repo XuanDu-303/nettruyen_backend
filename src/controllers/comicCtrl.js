@@ -336,6 +336,7 @@ const getTopComics = asyncHandler(async (req, res) => {
           .json({ message: 'Invalid period. Use "day", "week", or "month".' });
     }
 
+    console.log(comics)
     res.json(comics);
   } catch (error) {
     console.error(`Error getting top comics of the ${period}:`, error);
